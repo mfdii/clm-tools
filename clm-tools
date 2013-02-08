@@ -1,0 +1,38 @@
+#!/usr/bin/python
+
+import sys
+import ConfigParser
+
+config = ConfigParser.ConfigParser()
+config.read('config')
+
+user=config.get("Basic","USERNAME").strip('"')
+password=config.get("Basic","PASSWORD").strip('"')
+endpoint=config.get("Basic","ENDPOINT").strip('"')
+installDir=config.get("Basic","INSTALL_DIR").strip('"')
+
+
+sys.path.append(str.strip(installDir,'"')+"/lib")
+
+
+from clm import *
+
+clm = CLM(user,password,endpoint)
+
+clm.login()
+
+if len(sys.argv) > 1 and sys.argv[1] == 'clm-describe-instances':
+	clm.describeInstances()
+	exit
+if len(sys.argv) > 1 and sys.argv[1] == 'clm-describe-images':
+        clm.describeImages()
+        exit
+if len(sys.argv) > 1 and sys.argv[1] == 'clm-describe-regions':
+        clm.describeRegions()
+        exit
+if len(sys.argv) > 1 and sys.argv[1] == 'clm-describe-availability-zones':
+        clm.describeAZs()
+        exit
+if len(sys.argv) > 1 and sys.argv[1] == 'clm-describe-vpcs':
+        clm.describeVPCs()
+        exit
