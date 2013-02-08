@@ -1,5 +1,5 @@
 [Basic]
 ENDPOINT="http://bmcpm:9080"
-USERNAME=""
-PASSWORD=""
+USERNAME="cadmin2"
+PASSWORD="Pa$$w0rd"
 INSTALL_DIR="/Users/michael/Dropbox/dev/clm-tools"

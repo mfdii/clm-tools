@@ -58,12 +58,12 @@ class CLM:
 		
 		return json_content[0]['results']
 
-	def runInstance(self,SOguid):
+	def runInstance(self,SOreConID):
 
-		SOreConID = ""
 		http=httplib2.Http()
                 request =  { "callbackURL":"", "operationParams": [{ "quantity": 1, "serviceOfferingID": SOreConID }], "postCallout":"", "preCallout":"", "timeout":-1  }
                 response, content = http.request(self.endpoint+"/csm/NetworkContainer/search", "POST",headers={'Accept': 'application/json','User-agent': 'bmc-tools', 'Authentication-Token': self.authToken}, body=dumps(request, indent=2))
-                json_content = loads(content)
-                for serviceOffering in  json_content[0]['results']:
-                        print serviceOffering['guid'] + "\t" + serviceOffering['name']
+#                json_content = loads(content)
+#                for serviceOffering in  json_content[0]['results']:
+#                        print serviceOffering['guid'] + "\t" + serviceOffering['name']
+		print content
