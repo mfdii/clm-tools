@@ -8,11 +8,11 @@ Requires Python and httplib2.
 
 ### Edit the config:
 
-[Basic]
-ENDPOINT="http://bmcpm:8080" <- IP/Hostname of the Platform Manager and port (typically 8080)
-USERNAME="" <- admin level credentials
-PASSWORD="" <- admin password 
-INSTALL_DIR="/Users/michael/dev/bmc-tools" <- some location you installed the files
+    [Basic]
+    ENDPOINT="http://bmcpm:8080" <- IP/Hostname of the Platform Manager and port (typically 8080)
+    USERNAME="" <- admin level credentials
+    PASSWORD="" <- admin password 
+    INSTALL_DIR="/Users/michael/dev/bmc-tools" <- some location you installed the files
 
 ### Run the commands
 
