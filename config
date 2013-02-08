@@ -2,4 +2,4 @@
 ENDPOINT="http://bmcpm:9080"
 USERNAME=""
 PASSWORD=""
-INSTALL_DIR="/Users/michael/Dropbox/dev/bmc-tools"
+INSTALL_DIR="/Users/michael/Dropbox/dev/clm-tools"

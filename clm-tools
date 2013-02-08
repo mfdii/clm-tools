@@ -22,17 +22,30 @@ clm = CLM(user,password,endpoint)
 clm.login()
 
 if len(sys.argv) > 1 and sys.argv[1] == 'clm-describe-instances':
-	clm.describeInstances()
+	results=clm.describeInstances()
+	print results
 	exit
 if len(sys.argv) > 1 and sys.argv[1] == 'clm-describe-images':
-        clm.describeImages()
+        results=clm.describeImages()
+	print "GUID\tReconID\tName"
+	for serviceOffering in results:
+		print serviceOffering['guid'] + "\t" + serviceOffering['reconciliationID'] + "\t" + serviceOffering['name']
         exit
 if len(sys.argv) > 1 and sys.argv[1] == 'clm-describe-regions':
-        clm.describeRegions()
+	results=clm.describeRegions()
+	print "GUID\tReconID\tName"
+	for serviceOffering in results:
+		print serviceOffering['guid'] + "\t" + serviceOffering['reconciliationID'] + "\t" + serviceOffering['name']
         exit
 if len(sys.argv) > 1 and sys.argv[1] == 'clm-describe-availability-zones':
-        clm.describeAZs()
+        results=clm.describeAZs()
+	print "GUID\tReconID\tName"
+	for serviceOffering in results:
+		print serviceOffering['guid'] + "\t" + serviceOffering['reconciliationID'] + "\t" + serviceOffering['name']
         exit
 if len(sys.argv) > 1 and sys.argv[1] == 'clm-describe-vpcs':
-        clm.describeVPCs()
+        results=clm.describeVPCs()
+	print "GUID\tReconID\tName"
+	for serviceOffering in results:
+		print serviceOffering['guid'] + "\t" + serviceOffering['reconciliationID'] + "\t" + serviceOffering['name']
         exit
