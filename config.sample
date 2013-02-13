@@ -1,0 +1,5 @@
+[Basic]
+ENDPOINT="http://PlatformManager:8080"
+USERNAME="user"
+PASSWORD="pass"
+INSTALL_DIR="~/dev/clm-tools"
